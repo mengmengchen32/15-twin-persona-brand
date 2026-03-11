@@ -33,11 +33,12 @@
     font-size: 72px;
     font-weight: 900;
     letter-spacing: 5px;
-    line-height: 0.95;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 20px;
   }
-  .cover .solid { display: block; color: #fff; }
+  .cover .solid { color: #fff; }
   .cover .outline {
-    display: block;
     -webkit-text-stroke: 1.5px #fff;
     -webkit-text-fill-color: transparent;
   }
@@ -115,15 +116,16 @@
     font-size: 40px;
     font-weight: 900;
     letter-spacing: 4px;
-    line-height: 0.95;
-    text-align: center;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 12px;
   }
 
   /* Primary */
-  .dark .demo-logo .solid { display: block; color: #fff; }
-  .dark .demo-logo .outline { display: block; -webkit-text-stroke: 1.2px #fff; -webkit-text-fill-color: transparent; }
-  .light .demo-logo .solid { display: block; color: var(--black); }
-  .light .demo-logo .outline { display: block; -webkit-text-stroke: 1.2px var(--black); -webkit-text-fill-color: transparent; }
+  .dark .demo-logo .solid { color: #fff; }
+  .dark .demo-logo .outline { -webkit-text-stroke: 1.2px #fff; -webkit-text-fill-color: transparent; }
+  .light .demo-logo .solid { color: var(--black); }
+  .light .demo-logo .outline { -webkit-text-stroke: 1.2px var(--black); -webkit-text-fill-color: transparent; }
 
   /* Accent */
   .dark .demo-logo.accent .solid { color: #fff; }
@@ -200,8 +202,8 @@
     margin: 32px 0;
     position: relative;
   }
-  .clearspace .demo-logo .solid { display: block; color: #fff; }
-  .clearspace .demo-logo .outline { display: block; -webkit-text-stroke: 1.2px #fff; -webkit-text-fill-color: transparent; }
+  .clearspace .demo-logo .solid { color: #fff; }
+  .clearspace .demo-logo .outline { -webkit-text-stroke: 1.2px #fff; -webkit-text-fill-color: transparent; }
   .cs-box {
     position: absolute;
     border: 1px dashed rgba(43, 92, 255, 0.4);
@@ -239,8 +241,9 @@
     letter-spacing: 1px;
   }
   .dont-card .demo-logo {
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: 3px;
+    justify-content: center;
   }
 
   /* File list */
@@ -306,7 +309,7 @@
   <div class="section">
     <h2>Concept</h2>
     <div class="rule"></div>
-    <p>The Twin Persona wordmark expresses duality through a single typographic device: <strong>solid</strong> meets <strong>outline</strong>. TWIN is filled. PERSONA is stroked. Same typeface, same weight, same size — two presentations of one identity.</p>
+    <p>The Twin Persona wordmark expresses duality through a single typographic device: <strong>solid</strong> meets <strong>outline</strong>. TWIN is filled. PERSONA is stroked. Same typeface, same weight, same size — two presentations of one identity, set side by side on a single line.</p>
     <p>This contrast embodies the brand's core idea without decoration, illustration, or complexity. The logo does one thing well.</p>
   </div>
 
@@ -403,7 +406,7 @@
       <div class="type-dm">The quick brown fox jumps over the lazy dog. Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.</div>
     </div>
 
-    <p style="margin-top:16px;"><strong>Logo specs:</strong> Outfit, weight 900, letter-spacing 5px, line-height 0.95. Outline stroke: 1.5px at 64px, scales proportionally.</p>
+    <p style="margin-top:16px;"><strong>Logo specs:</strong> Outfit, weight 900, letter-spacing 5px. TWIN solid, PERSONA outline, set on one line with gap equal to one character width. Outline stroke: 1.5px at 64px, scales proportionally.</p>
   </div>
 
   <!-- CLEAR SPACE -->
@@ -428,33 +431,33 @@
     <div class="donts">
       <div class="dont-card">
         <div class="x">&#x2717;</div>
-        <div class="demo-logo" style="color:#e53e3e;font-size:24px;">
-          <span style="display:block; font-style:italic;">TWIN</span>
-          <span style="display:block; font-style:italic;-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">PERSONA</span>
+        <div class="demo-logo" style="color:#e53e3e;">
+          <span style="font-style:italic;">TWIN</span>
+          <span style="font-style:italic;-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">PERSONA</span>
         </div>
         <div class="label" style="margin-top:12px;">Don't italicize</div>
       </div>
       <div class="dont-card">
         <div class="x">&#x2717;</div>
-        <div class="demo-logo" style="font-size:24px;">
-          <span style="display:block;color:#e53e3e;">twin</span>
-          <span style="display:block;-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">persona</span>
+        <div class="demo-logo">
+          <span style="color:#e53e3e;">twin</span>
+          <span style="-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">persona</span>
         </div>
         <div class="label" style="margin-top:12px;">Don't use lowercase</div>
       </div>
       <div class="dont-card">
         <div class="x">&#x2717;</div>
-        <div class="demo-logo" style="font-size:24px;">
-          <span style="display:block;color:#e53e3e;">TWIN</span>
-          <span style="display:block;color:#e53e3e;">PERSONA</span>
+        <div class="demo-logo">
+          <span style="color:#e53e3e;">TWIN</span>
+          <span style="color:#e53e3e;">PERSONA</span>
         </div>
         <div class="label" style="margin-top:12px;">Don't make both solid</div>
       </div>
       <div class="dont-card">
         <div class="x">&#x2717;</div>
-        <div class="demo-logo" style="font-size:24px;">
-          <span style="display:block;-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">TWIN</span>
-          <span style="display:block;-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">PERSONA</span>
+        <div class="demo-logo">
+          <span style="-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">TWIN</span>
+          <span style="-webkit-text-stroke:1px #e53e3e;-webkit-text-fill-color:transparent;">PERSONA</span>
         </div>
         <div class="label" style="margin-top:12px;">Don't make both outline</div>
       </div>
