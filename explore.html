@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWIN PERSONA — Final Logo Direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #2B5CFF;
+    --black: #111111;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 60px 40px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .header h1 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  .header p {
+    font-size: 13px;
+    color: #444;
+    letter-spacing: 1px;
+  }
+
+  .concepts {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #555;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 40px;
+  }
+  .section-label span {
+    color: #888;
+    font-weight: 300;
+    margin-left: 12px;
+    letter-spacing: 1px;
+    text-transform: none;
+    font-size: 11px;
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+  }
+  .logo-grid.single {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .logo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    border-radius: 2px;
+    position: relative;
+    background: #0f0f0f;
+    border: 1px solid #1a1a1a;
+    overflow: hidden;
+  }
+  .logo-card.light {
+    background: #f5f3f0;
+    border-color: #e0ddd8;
+  }
+  .logo-card.white {
+    background: #ffffff;
+    border-color: #e5e5e5;
+  }
+  .logo-card.hero {
+    padding: 100px 60px;
+  }
+
+  .variant-label {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #444;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+  .variant-desc {
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+  .pick {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #2B5CFF;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .replay-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: 1px solid #333;
+    color: #555;
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .replay-btn:hover {
+    color: #fff;
+    border-color: #666;
+  }
+
+  .note {
+    max-width: 700px;
+    margin: -20px 0 40px 0;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 300;
+  }
+
+  /* ============================================ */
+  /* BASE LOGO                                     */
+  /* ============================================ */
+
+  .logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 0.95;
+    text-align: center;
+  }
+  .logo.sm {
+    font-size: 36px;
+    letter-spacing: 3px;
+  }
+
+  /* ============================================ */
+  /* PRIMARY — MONOCHROME                          */
+  /* ============================================ */
+
+  /* On dark: white */
+  .mono-dark .solid { display: block; color: #fff; }
+  .mono-dark .outline {
+    display: block;
+    -webkit-text-stroke: 1.5px #fff;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* On light: black */
+  .mono-light .solid { display: block; color: var(--black); }
+  .mono-light .outline {
+    display: block;
+    -webkit-text-stroke: 1.5px var(--black);
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ============================================ */
+  /* SECONDARY — MINIMAL COLOR ACCENT              */
+  /* ============================================ */
+
+  /* Color accent: only the outline word gets blue */
+  .accent-dark .solid { display: block; color: #fff; }
+  .accent-dark .outline {
+    display: block;
+    -webkit-text-stroke: 1.5px var(--blue);
+    -webkit-text-fill-color: transparent;
+  }
+
+  .accent-light .solid { display: block; color: var(--black); }
+  .accent-light .outline {
+    display: block;
+    -webkit-text-stroke: 1.5px var(--blue);
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ============================================ */
+  /* SIZES & SCALES                                */
+  /* ============================================ */
+
+  .logo.sm .outline {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  /* ============================================ */
+  /* ONE-SHOT ANIMATION — MONOCHROME               */
+  /* ============================================ */
+
+  .os-mono .top {
+    display: block;
+    -webkit-text-stroke: 1.5px #fff;
+    -webkit-text-fill-color: transparent;
+    animation: fillWhite 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+  }
+  .os-mono .bottom {
+    display: block;
+    -webkit-text-stroke: 1.5px #fff;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+  }
+
+  @keyframes fillWhite {
+    0% { -webkit-text-fill-color: transparent; }
+    100% { -webkit-text-fill-color: #fff; -webkit-text-stroke: 0px transparent; }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+
+  /* OS on light */
+  .os-mono-light .top {
+    display: block;
+    -webkit-text-stroke: 1.5px var(--black);
+    -webkit-text-fill-color: transparent;
+    animation: fillBlack 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+  }
+  .os-mono-light .bottom {
+    display: block;
+    -webkit-text-stroke: 1.5px var(--black);
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+  }
+
+  @keyframes fillBlack {
+    0% { -webkit-text-fill-color: transparent; }
+    100% { -webkit-text-fill-color: var(--black); -webkit-text-stroke: 0px transparent; }
+  }
+
+  /* Swap animation — monochrome */
+  .os-swap .top {
+    display: block;
+    -webkit-text-stroke: 1.5px #fff;
+    -webkit-text-fill-color: transparent;
+    animation: monoSwapToSolid 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+  }
+  .os-swap .bottom {
+    display: block;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    animation: monoSwapToOutline 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+  }
+
+  @keyframes monoSwapToSolid {
+    0% { -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px #fff; }
+    40% { -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.3); }
+    100% { -webkit-text-fill-color: #fff; -webkit-text-stroke: 0px transparent; }
+  }
+  @keyframes monoSwapToOutline {
+    0% { -webkit-text-fill-color: #fff; -webkit-text-stroke: 0px transparent; }
+    40% { -webkit-text-fill-color: rgba(255,255,255,0.3); -webkit-text-stroke: 0px transparent; }
+    100% { -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px #fff; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Twin Persona</h1>
+  <p>Final Direction &mdash; Monochrome Primary, Color as Brand Accent</p>
+</div>
+
+<div class="concepts">
+
+  <!-- PRIMARY LOGO -->
+  <div>
+    <div class="section-label">Primary Logo <span>Monochrome &mdash; one idea, expressed cleanly</span></div>
+    <p class="note">The solid/outline contrast already communicates duality. No color needed. This is the logo.</p>
+    <div class="logo-grid">
+
+      <div class="logo-card hero">
+        <span class="variant-label">DARK</span>
+        <span class="pick">Primary</span>
+        <span class="variant-desc">White solid + White outline</span>
+        <div class="logo mono-dark">
+          <span class="solid">TWIN</span>
+          <span class="outline">PERSONA</span>
+        </div>
+      </div>
+
+      <div class="logo-card hero white">
+        <span class="variant-label" style="color:#bbb">LIGHT</span>
+        <span class="pick">Primary</span>
+        <span class="variant-desc" style="color:#bbb">Black solid + Black outline</span>
+        <div class="logo mono-light">
+          <span class="solid">TWIN</span>
+          <span class="outline">PERSONA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCALED VERSIONS -->
+  <div>
+    <div class="section-label">Scaled <span>Smaller applications &mdash; favicons, headers, watermarks</span></div>
+    <div class="logo-grid">
+
+      <div class="logo-card">
+        <span class="variant-label">SMALL / DARK</span>
+        <div class="logo sm mono-dark">
+          <span class="solid">TWIN</span>
+          <span class="outline">PERSONA</span>
+        </div>
+      </div>
+
+      <div class="logo-card white">
+        <span class="variant-label" style="color:#bbb">SMALL / LIGHT</span>
+        <div class="logo sm mono-light">
+          <span class="solid">TWIN</span>
+          <span class="outline">PERSONA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BRAND COLOR ACCENT (SECONDARY) -->
+  <div>
+    <div class="section-label">Brand Accent <span>Secondary &mdash; when you need a pop of color</span></div>
+    <p class="note">If you ever need the logo to carry brand color (hero banners, launch pages), the blue goes on the outline only. The solid word stays neutral. Use sparingly.</p>
+    <div class="logo-grid">
+
+      <div class="logo-card">
+        <span class="variant-label">ACCENT / DARK</span>
+        <span class="variant-desc">White solid + Blue outline</span>
+        <div class="logo accent-dark">
+          <span class="solid">TWIN</span>
+          <span class="outline">PERSONA</span>
+        </div>
+      </div>
+
+      <div class="logo-card white">
+        <span class="variant-label" style="color:#bbb">ACCENT / LIGHT</span>
+        <span class="variant-desc" style="color:#bbb">Black solid + Blue outline</span>
+        <div class="logo accent-light">
+          <span class="solid">TWIN</span>
+          <span class="outline">PERSONA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ONE-SHOT ANIMATIONS -->
+  <div>
+    <div class="section-label">One-shot Animation <span>For reveals only &mdash; homepage load, pitch deck intro</span></div>
+    <p class="note">Plays once, settles into the primary logo. Pure monochrome &mdash; the motion itself tells the duality story.</p>
+    <div class="logo-grid">
+
+      <div class="logo-card">
+        <span class="variant-label">REVEAL</span>
+        <span class="variant-desc">Both outline &rarr; TWIN fills solid</span>
+        <button class="replay-btn" onclick="replay(this)">Replay</button>
+        <div class="logo os-mono" data-anim>
+          <span class="top">TWIN</span>
+          <span class="bottom">PERSONA</span>
+        </div>
+      </div>
+
+      <div class="logo-card white">
+        <span class="variant-label" style="color:#bbb">REVEAL / LIGHT</span>
+        <span class="variant-desc" style="color:#bbb">Both outline &rarr; TWIN fills solid</span>
+        <button class="replay-btn" style="border-color:#ccc;color:#999" onclick="replay(this)">Replay</button>
+        <div class="logo os-mono-light" data-anim>
+          <span class="top">TWIN</span>
+          <span class="bottom">PERSONA</span>
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <span class="variant-label">SWAP</span>
+        <span class="variant-desc">Roles switch once &rarr; settle</span>
+        <button class="replay-btn" onclick="replay(this)">Replay</button>
+        <div class="logo os-swap" data-anim>
+          <span class="top">TWIN</span>
+          <span class="bottom">PERSONA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div style="height: 100px;"></div>
+
+<script>
+function replay(btn) {
+  const card = btn.closest('.logo-card');
+  const el = card.querySelector('[data-anim]');
+  if (!el) return;
+  const clone = el.cloneNode(true);
+  el.parentNode.replaceChild(clone, el);
+}
+</script>
+
+</body>
+</html>
